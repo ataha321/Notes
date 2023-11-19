@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script type="text/javascript" src="./lib/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="./js/note.js"></script>
+    <script type="text/javascript" src="./js/animate.js"></script>
+    <title>Note</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Note's Generator</h1>
+    </div>
+
+    <div id="wrapper">
+        <div id="dashboard"> 
+            <button class="button-55" id= "mysteryanimate_em" onclick="animation()">ANIMATION!</button>       
+            <fieldset>
+                <legend>Adding</legend>
+                <label class="form-label" for="noteNum"> Note's Number: </label><input
+                type="text"
+                
+                id="id_noteNumberToCreate"
+                name="name_noteNumberToCreate"
+                value="1"
+                maxlength="1"
+                size="1"/>
+                <button class="button-55" id="id_createNote" onclick="createNote()">Create</button>
+                
+                <br><br>
+                <label class="form-label" for="freeform">Enter the note  or </label><button class="button-55"  id="id_randomfill" onclick="randomfillNote()">Random Fill</button>
+                <br><br>
+
+                <textarea  id="id_freeform" name="name_freeform" rows="10" cols="50">Enter text here...</textarea>
+            </fieldset>
+            <br><br>
+
+            <fieldset>
+                <legend>Styling</legend>
+                <button class="button-55" id="id_" onclick="highlightNote()" style="width: 200px;"> Highlight note number: </button>
+                <input
+                type="text"
+                id="id_highlightNote"
+                name="name_highlightNote"
+                value="1"
+                maxlength="1"
+                size="1"
+                />
+                <label class="form-label" for="id_highlight">Choose:</label>
+                <select name="name_highlight" id="id_highlight" >
+                <option value="Priority">Priority</option>
+                <option value="Agent">Agent</option>
+                <option value="ASAP">ASAP</option>
+                <option value="Later">Do it later</option>
+                </select>
+                <br><br>
+                <button class="button-55" id="changeAll" onclick="addSmiley(true)">Add Smiley Before</button>
+                <input
+                type="text"
+                id="id_smileybefore"
+                name="name_smileybefore"
+                value="1"
+                maxlength="1"
+                size="1"
+              /><br><br>
+                  <button class="button-55" id="changeAll" onclick="addSmiley(false)">Add Smiley After</button>
+                  <input
+                type="text"
+                id="id_smileyafter"
+                name="name_smileyafter"
+                value="1"
+                maxlength="1"
+                size="1"
+              />
+            </fieldset>
+            <br><br>
+
+            <fieldset> 
+                <legend>Editing</legend>
+                <button class="button-55"  id="id_temporarilyRemove" onclick="temporarilyRemove()" style="width: 200px;">Temporarily remove note number </button>
+                <input
+                type="text"
+                id="id_noteNumberToDetach"
+                name="name_noteNumberToDetach"
+                value="1"
+                maxlength="1"
+                size="1"/>
+                <button class="button-55"  id="id_restorenumber" onclick="restoreNote()" style="width: 100px;">Restore</button><br>
+                <br><br>
+                <button class="button-55"  id="btn_getRidOf" onclick="removeNote()" style="width: 200px;">Get Rid Of Note's number</button> <input
+                type="text"
+                id="id_noteNumberToRemove"
+                name="name_noteNumberToRemove"
+                value="1"
+                maxlength="1"
+                size="1"
+            />
+                <br><br>
+
+                <button class="button-55"  id="id_fillAll" onclick="fillAll()" style="width:250px">Fill All Note </button>
+                <br><br>
+
+                <button class="button-55"  id="btn_getRidOf" onclick="getRidOfNote()" style="width: 200px;">Clear out all Notes</button>
+                              
+            </fieldset>               
+        </div>
+        <div id="note">
+            
+        </div>
+    </div>   
+</body>
+</html>
